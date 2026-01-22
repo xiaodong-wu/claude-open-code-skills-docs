@@ -45,12 +45,15 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
             <span className="text-sm text-muted-foreground">
               {tutorial.duration}
             </span>
+            <span className="px-3 py-1 text-sm bg-secondary text-secondary-foreground rounded-full">
+              {tutorial.category}
+            </span>
           </div>
           <h1 className="text-4xl font-bold mb-4">{tutorial.title}</h1>
           <p className="text-xl text-muted-foreground">{tutorial.description}</p>
         </div>
 
-        <TutorialContent />
+        <TutorialContent slug={params.slug} />
       </div>
     </div>
   )

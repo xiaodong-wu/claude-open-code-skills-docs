@@ -118,5 +118,15 @@ export const allTutorials = [
     duration: "70 分钟",
     readTime: 55,
     date: "2026-01-12"
+  },
+  {
+    slug: "cloudflare-pages-auto-deploy",
+    title: "Cloudflare Pages 自动部署实战",
+    description: "从零配置 GitHub 与 Cloudflare Pages 集成，实现代码推送自动构建部署",
+    tool: "Both",
+    category: "practical",
+    duration: "40 分钟",
+    readTime: 30,
+    date: "2026-01-22"
   }
 ]
