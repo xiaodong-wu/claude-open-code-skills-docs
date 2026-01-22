@@ -45,8 +45,7 @@ claude-open-code-docs/
 │   └── examples.ts           # 示例数据
 ├── lib/                      # 工具函数
 ├── public/                   # 静态资源
-│   └── _redirects            # Cloudflare Pages 重定向规则
-├── .cloudflare-pages-build.json  # Cloudflare Pages 构建配置
+│   └── _redirects            # SPA 路由重定向规则
 ├── .nvmrc                    # Node.js 版本配置
 ├── next.config.ts            # Next.js 配置
 ├── DEPLOYMENT.md             # 详细部署文档
@@ -114,21 +113,11 @@ git push -u origin main
 
 ### 步骤 2：配置项目文件
 
-项目已包含必要的配置文件，无需额外配置：
+项目已包含必要的配置文件：
 
 **`.nvmrc`** - 指定 Node.js 版本
 ```
 20.11.1
-```
-
-**`.cloudflare-pages-build.json`** - 构建配置
-```json
-{
-  "build_command": "npm install && npm run build",
-  "destination_dir": "out",
-  "node_version": "20",
-  "compatibility_flags": ["nodejs_compat"]
-}
 ```
 
 **`next.config.ts`** - Next.js 静态导出配置

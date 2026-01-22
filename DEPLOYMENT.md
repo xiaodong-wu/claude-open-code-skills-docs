@@ -29,14 +29,13 @@
    - 登录 [Cloudflare 控制台](https://dash.cloudflare.com/)
    - 进入 **Workers & Pages** → **创建应用** → **Pages** → **连接到 Git**
    - 选择你的 GitHub 仓库并授权
-   - 配置构建设置（会自动读取 `.cloudflare-pages-build.json`）：
+   - 配置构建设置：
 
    | 设置项 | 值 |
    |--------|-----|
    | 构建命令 | `npm install && npm run build` |
    | 构建输出目录 | `out` |
    | Node.js 版本 | `20` |
-   | 兼容性标志 | `nodejs_compat` |
 
 3. **环境变量（可选）**
    - 如需 API 密钥等，在 **设置** → **环境变量** 中添加

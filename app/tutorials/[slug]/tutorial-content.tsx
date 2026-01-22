@@ -109,30 +109,24 @@ export default nextConfig;`}
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">3. 添加构建配置文件</CardTitle>
+              <CardTitle className="text-lg">3. 添加配置文件</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground mb-4">
-                创建 <code className="bg-black/5 dark:bg-white/5 px-2 py-1 rounded">.cloudflare-pages-build.json</code>：
-              </p>
-              <div className="bg-black/5 dark:bg-white/5 rounded-lg p-4 mb-4">
-                <pre className="text-sm font-mono text-foreground/90">
-                  {`{
-  "build_command": "npm install && npm run build",
-  "destination_dir": "out",
-  "node_version": "20",
-  "compatibility_flags": ["nodejs_compat"]
-}`}
-                </pre>
-              </div>
-              <p className="text-sm text-muted-foreground mb-2">
-                同时创建 <code className="bg-black/5 dark:bg-white/5 px-2 py-1 rounded">.nvmrc</code> 指定 Node 版本：
+                创建 <code className="bg-black/5 dark:bg-white/5 px-2 py-1 rounded">.nvmrc</code> 指定 Node 版本：
               </p>
               <div className="bg-black/5 dark:bg-white/5 rounded-lg p-4">
                 <pre className="text-sm font-mono text-foreground/90">
                   20.11.1
                 </pre>
               </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                Next.js 配置和路由重定向文件已经包含在项目中：
+              </p>
+              <ul className="text-sm text-muted-foreground mt-2 space-y-1">
+                <li>• <code className="bg-black/5 dark:bg-white/5 px-1 rounded">next.config.ts</code> - 静态导出配置</li>
+                <li>• <code className="bg-black/5 dark:bg-white/5 px-1 rounded">public/_redirects</code> - SPA 路由支持</li>
+              </ul>
             </CardContent>
           </Card>
         </section>
@@ -193,7 +187,7 @@ export default nextConfig;`}
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground mb-4">
-                Cloudflare 会自动读取 <code className="bg-black/5 dark:bg-white/5 px-2 py-1 rounded">.cloudflare-pages-build.json</code>，你也可以手动配置：
+                在 Cloudflare Pages 中手动配置构建设置：
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
