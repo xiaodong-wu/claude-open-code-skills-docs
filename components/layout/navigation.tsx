@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Code2, Book, Zap, FileCode, Menu, X } from "lucide-react"
+import { Code2, Book, Zap, FileCode, Menu, X, Puzzle, Search } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
@@ -11,7 +11,9 @@ const navigation = [
   { name: "首页", href: "/", icon: Code2 },
   { name: "Claude Code", href: "/claude-code", icon: Zap },
   { name: "Open Code", href: "/open-code", icon: FileCode },
+  { name: "Skills", href: "/skills", icon: Puzzle },
   { name: "教程", href: "/tutorials", icon: Book },
+  { name: "API 文档", href: "/api", icon: Search },
 ]
 
 export function Navigation() {
