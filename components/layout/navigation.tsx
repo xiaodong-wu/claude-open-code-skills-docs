@@ -2,23 +2,50 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Code2, Book, Zap, FileCode, Menu, X, Puzzle, Search } from "lucide-react"
+import { Code2, Book, Zap, FileCode, Menu, X, Search } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useState, useCallback, memo } from "react"
 
 const navigation = [
   { name: "首页", href: "/", icon: Code2 },
   { name: "Claude Code", href: "/claude-code", icon: Zap },
   { name: "Open Code", href: "/open-code", icon: FileCode },
-  { name: "Skills", href: "/skills", icon: Puzzle },
   { name: "教程", href: "/tutorials", icon: Book },
   { name: "API 文档", href: "/api", icon: Search },
 ]
 
+const NavLink = memo(({ item, isActive, onClick }: {
+  item: typeof navigation[0]
+  isActive: boolean
+  onClick?: () => void
+}) => {
+  const Icon = item.icon
+  return (
+    <Link
+      href={item.href}
+      className={`flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary ${
+        isActive
+          ? "text-primary"
+          : "text-muted-foreground"
+      }`}
+      onClick={onClick}
+    >
+      <Icon className="h-4 w-4" />
+      {item.name}
+    </Link>
+  )
+})
+
+NavLink.displayName = "NavLink"
+
 export function Navigation() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const closeMobileMenu = useCallback(() => {
+    setMobileMenuOpen(false)
+  }, [])
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
@@ -34,24 +61,13 @@ export function Navigation() {
           </div>
 
           <div className="hidden md:flex md:items-center md:gap-6">
-            {navigation.map((item) => {
-              const Icon = item.icon
-              const isActive = pathname === item.href
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary ${
-                    isActive
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  <Icon className="h-4 w-4" />
-                  {item.name}
-                </Link>
-              )
-            })}
+            {navigation.map((item) => (
+              <NavLink
+                key={item.name}
+                item={item}
+                isActive={pathname === item.href}
+              />
+            ))}
           </div>
 
           <div className="flex items-center gap-2">
@@ -72,7 +88,7 @@ export function Navigation() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4">
+          <div className="md:hidden py-4 space-y-1">
             {navigation.map((item) => {
               const Icon = item.icon
               const isActive = pathname === item.href
@@ -80,12 +96,12 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors hover:text-primary ${
+                  className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors hover:text-primary rounded-md ${
                     isActive
                       ? "text-primary bg-accent"
-                      : "text-muted-foreground"
+                      : "text-muted-foreground hover:bg-accent/50"
                   }`}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={closeMobileMenu}
                 >
                   <Icon className="h-4 w-4" />
                   {item.name}

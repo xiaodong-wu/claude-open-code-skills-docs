@@ -1,0 +1,6 @@
+{
+  "build_command": "npm install && npm run build",
+  "destination_dir": "out",
+  "node_version": "18",
+  "compatibility_flags": ["nodejs_compat"]
+}
