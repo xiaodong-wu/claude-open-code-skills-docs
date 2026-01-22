@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Code2, Book, Zap, FileCode, Menu, X, Search } from "lucide-react"
+import { Code2, Book, Zap, FileCode, Menu, X, Search, Box } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { useState, useCallback, memo } from "react"
@@ -12,6 +12,7 @@ const navigation = [
   { name: "Claude Code", href: "/claude-code", icon: Zap },
   { name: "Open Code", href: "/open-code", icon: FileCode },
   { name: "教程", href: "/tutorials", icon: Book },
+  { name: "Skills", href: "/skills", icon: Box },
   { name: "API 文档", href: "/api", icon: Search },
 ]
 
