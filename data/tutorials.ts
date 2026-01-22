@@ -2,7 +2,7 @@ export const allTutorials = [
   {
     slug: "claude-code-quickstart",
     title: "Claude Code 快速入门",
-    description: "学习如何安装和配置 Claude Code，掌握基本命令和操作",
+    description: "学习如何在 30 秒内安装和配置 Claude Code，掌握基本操作",
     tool: "Claude Code",
     category: "beginner",
     duration: "15 分钟",
@@ -12,7 +12,7 @@ export const allTutorials = [
   {
     slug: "open-code-introduction",
     title: "Open Code 基础介绍",
-    description: "了解 Open Code 的核心概念、Skills 系统和工具能力",
+    description: "了解 Open Code 的核心概念、工具系统和 LLM provider 配置",
     tool: "Open Code",
     category: "beginner",
     duration: "20 分钟",
@@ -20,44 +20,74 @@ export const allTutorials = [
     date: "2026-01-02"
   },
   {
-    slug: "claude-code-commands",
-    title: "Claude Code 常用命令",
-    description: "掌握 Claude Code 的核心命令和参数配置",
+    slug: "claude-code-install",
+    title: "Claude Code 安装指南",
+    description: "多种安装方式详解（Native、Homebrew、WinGet），选择最适合你的方式",
     tool: "Claude Code",
     category: "beginner",
-    duration: "25 分钟",
-    readTime: 20,
+    duration: "20 分钟",
+    readTime: 15,
     date: "2026-01-03"
   },
   {
-    slug: "open-code-tools",
-    title: "Open Code 工具详解",
-    description: "深入了解 Open Code 内置工具的使用方法和最佳实践",
+    slug: "open-code-install",
+    title: "Open Code 安装与配置",
+    description: "完整安装指南，包括配置 LLM provider 和项目初始化",
     tool: "Open Code",
     category: "beginner",
-    duration: "30 分钟",
-    readTime: 25,
+    duration: "25 分钟",
+    readTime: 20,
     date: "2026-01-04"
   },
   {
-    slug: "skills-development",
-    title: "自定义 Skills 开发",
-    description: "学习如何创建和部署自定义 Skills 来扩展 Open Code 功能",
+    slug: "claude-code-workflows",
+    title: "Claude Code 常见工作流",
+    description: "从描述构建功能、调试修复、导航代码库到自动化任务",
+    tool: "Claude Code",
+    category: "beginner",
+    duration: "30 分钟",
+    readTime: 25,
+    date: "2026-01-05"
+  },
+  {
+    slug: "open-code-plan-mode",
+    title: "Open Code Plan 模式详解",
+    description: "学习使用 Plan 模式先规划再执行，提高开发效率",
+    tool: "Open Code",
+    category: "beginner",
+    duration: "25 分钟",
+    readTime: 20,
+    date: "2026-01-06"
+  },
+  {
+    slug: "claude-code-cli-reference",
+    title: "Claude Code CLI 命令参考",
+    description: "完整的命令行接口文档，包括常用命令和控制",
+    tool: "Claude Code",
+    category: "advanced",
+    duration: "35 分钟",
+    readTime: 30,
+    date: "2026-01-07"
+  },
+  {
+    slug: "open-code-custom-tools",
+    title: "Open Code 自定义工具开发",
+    description: "创建自定义工具扩展 Open Code 功能",
     tool: "Open Code",
     category: "advanced",
     duration: "45 分钟",
     readTime: 35,
-    date: "2026-01-05"
+    date: "2026-01-08"
   },
   {
-    slug: "advanced-configuration",
-    title: "高级配置与优化",
-    description: "探索 Claude Code 和 Open Code 的高级配置选项和性能优化",
-    tool: "Both",
+    slug: "claude-code-mcp",
+    title: "Claude Code MCP 集成",
+    description: "学习使用 Model Context Protocol 连接外部数据源",
+    tool: "Claude Code",
     category: "advanced",
     duration: "40 分钟",
     readTime: 30,
-    date: "2026-01-06"
+    date: "2026-01-09"
   },
   {
     slug: "project-refactoring",
@@ -67,7 +97,7 @@ export const allTutorials = [
     category: "practical",
     duration: "60 分钟",
     readTime: 45,
-    date: "2026-01-07"
+    date: "2026-01-10"
   },
   {
     slug: "bug-fixing-workflow",
@@ -77,16 +107,16 @@ export const allTutorials = [
     category: "practical",
     duration: "50 分钟",
     readTime: 40,
-    date: "2026-01-08"
+    date: "2026-01-11"
   },
   {
-    slug: "performance-optimization",
-    title: "性能优化案例",
-    description: "通过实际案例学习使用 AI 工具进行代码性能优化",
-    tool: "Claude Code",
+    slug: "feature-development",
+    title: "从零开始开发新功能",
+    description: "使用 Plan 模式规划，AI 辅助实现完整功能开发",
+    tool: "Open Code",
     category: "practical",
-    duration: "55 分钟",
-    readTime: 42,
-    date: "2026-01-09"
+    duration: "70 分钟",
+    readTime: 55,
+    date: "2026-01-12"
   }
 ]
