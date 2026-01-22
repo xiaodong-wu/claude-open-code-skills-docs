@@ -4,7 +4,7 @@
 
 ## 前置要求
 
-- Node.js >= 18.20.0（项目已通过 `.nvmrc` 指定版本）
+- Node.js >= 20.11.1（项目已通过 `.nvmrc` 指定版本）
 - npm 或 yarn 包管理器
 - Git 版本控制
 
@@ -35,7 +35,7 @@
    |--------|-----|
    | 构建命令 | `npm install && npm run build` |
    | 构建输出目录 | `out` |
-   | Node.js 版本 | `18` |
+   | Node.js 版本 | `20` |
    | 兼容性标志 | `nodejs_compat` |
 
 3. **环境变量（可选）**
@@ -362,7 +362,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -423,8 +423,8 @@ ANTHROPIC_API_KEY=your_api_key_here
 **问题**：Node.js 版本不兼容
 ```bash
 # 解决方案：使用 nvm 切换版本
-nvm install 18
-nvm use 18
+nvm install 20
+nvm use 20
 npm ci
 npm run build
 ```

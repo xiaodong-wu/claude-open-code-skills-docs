@@ -120,7 +120,7 @@ export default nextConfig;`}
                   {`{
   "build_command": "npm install && npm run build",
   "destination_dir": "out",
-  "node_version": "18",
+  "node_version": "20",
   "compatibility_flags": ["nodejs_compat"]
 }`}
                 </pre>
@@ -130,7 +130,7 @@ export default nextConfig;`}
               </p>
               <div className="bg-black/5 dark:bg-white/5 rounded-lg p-4">
                 <pre className="text-sm font-mono text-foreground/90">
-                  18.20.0
+                  20.11.1
                 </pre>
               </div>
             </CardContent>
@@ -214,7 +214,7 @@ export default nextConfig;`}
                     </tr>
                     <tr>
                       <td className="p-2 font-mono text-xs">Node.js 版本</td>
-                      <td className="p-2"><code className="bg-black/5 dark:bg-white/5 px-2 py-1 rounded">18</code></td>
+                      <td className="p-2"><code className="bg-black/5 dark:bg-white/5 px-2 py-1 rounded">20</code></td>
                     </tr>
                   </tbody>
                 </table>
