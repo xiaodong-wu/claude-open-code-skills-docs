@@ -463,6 +463,44 @@ NODE_OPTIONS="--max-old-space-size=4096" npm run build
 # 清除浏览器缓存并刷新
 ```
 
+**问题**：部署时出现 "Missing entry-point to Worker script" 错误
+
+这是 Cloudflare Pages 项目配置错误导致的。请按以下步骤解决：
+
+1. **检查项目类型**
+   ```
+   ✅ 正确：Pages 项目（Connect to Git）
+   ❌ 错误：Workers 项目（Direct Upload）
+   ```
+
+2. **重新创建项目**
+   - 在 Cloudflare Dashboard 中删除当前项目
+   - 点击 **Create application** → **Pages** → **Connect to Git**
+   - 不要选择 "Create a Worker" 或 "Direct Upload"
+
+3. **确认构建设置**
+   | 设置项 | 正确值 |
+   |--------|--------|
+   | 构建命令 | `npm install && npm run build` |
+   | 构建输出目录 | `out` |
+   | Root directory | `/` (留空或设置为 `/`) |
+   | Node.js 版本 | `20` |
+
+4. **检查自定义命令**
+   - 在 **Settings** → **Functions** 中
+   - 确保没有配置自定义的部署命令
+   - Cloudflare Pages 应该自动处理 `out` 目录，不需要手动 wrangler 命令
+
+5. **验证部署流程**
+   ```
+   构建成功 → 生成 out/ 目录 → Cloudflare 自动部署
+   ```
+
+如果问题持续，请确保：
+- 项目是通过 **Connect to Git** 创建的
+- 不是通过 **Direct Upload** 或 Workers 方式创建的
+- 构建输出目录设置为 `out`（不是其他路径）
+
 **问题**：路由无法访问
 - 检查 `trailingSlash: true` 配置
 - 验证重定向规则（`public/_redirects`）

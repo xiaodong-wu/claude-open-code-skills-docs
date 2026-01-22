@@ -288,6 +288,38 @@ A: 在 Cloudflare Pages 中：
 2. 找到之前的成功部署
 3. 点击 **Rollback** 按钮
 
+**Q: 部署时出现 "Missing entry-point to Worker script" 错误？**
+
+A: 这个错误表示 Cloudflare Pages 项目配置错误：
+
+1. **检查项目类型**
+   - 确保创建的是 **Pages** 项目，不是 Workers 项目
+   - 进入 Workers & Pages → 找到你的项目
+   - 确认项目类型为 "Pages" 而不是 "Workers"
+
+2. **重新创建项目**
+   - 删除当前的 Cloudflare Pages 项目
+   - 重新创建，选择 **Pages** 而不是 **Workers**
+   - 确保选择 **Connect to Git** 而不是 **Direct Upload**
+
+3. **确认构建设置**
+   - 构建命令：`npm install && npm run build`
+   - 构建输出目录：`out`
+   - Root directory：`/` (留空)
+   - Node.js 版本：`20`
+
+4. **不要添加自定义部署命令**
+   - 在项目设置中，确保没有配置自定义的部署命令
+   - Cloudflare Pages 会自动处理 `out` 目录
+
+正确的部署流程应该是：
+```
+构建 (npm run build) → 生成 out 目录 →
+Cloudflare 自动部署 out 目录
+```
+
+如果问题持续，请参考 [Cloudflare Pages 文档](https://developers.cloudflare.com/pages/)
+
 ### 更多信息
 
 查看 [DEPLOYMENT.md](./DEPLOYMENT.md) 获取更详细的部署指南和故障排除。
