@@ -11,8 +11,8 @@ const navigation = [
   { name: "首页", href: "/", icon: Code2 },
   { name: "Claude Code", href: "/claude-code", icon: Zap },
   { name: "Open Code", href: "/open-code", icon: FileCode },
-  { name: "教程", href: "/tutorials", icon: Book },
   { name: "Skills", href: "/skills", icon: Box },
+  { name: "教程", href: "/tutorials", icon: Book },
   { name: "API 文档", href: "/api", icon: Search },
 ]
 
