@@ -86,6 +86,8 @@ npm run build
 
 本项目已配置 Cloudflare Pages 自动部署，每次推送代码到 GitHub 后会自动构建和部署。
 
+预览：https://claude-open-code-skills-docs.pages.dev/
+
 ### 前置要求
 
 1. **GitHub 仓库** - 将代码推送到 GitHub
