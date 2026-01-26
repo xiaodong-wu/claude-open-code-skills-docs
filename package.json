@@ -1,6 +1,7 @@
 {
   "name": "claude-open-code-docs",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Claude Code & Open Code 工具介绍和资源导航网站 - AI 编程助手的完整指南",
   "private": true,
   "scripts": {
     "dev": "next dev",

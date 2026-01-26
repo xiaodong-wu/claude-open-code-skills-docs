@@ -1,12 +1,13 @@
-# Claude Code & Open Code 教程网站
+# Claude Code & Open Code 完全指南
 
-这是一个介绍 Claude Code 和 Open Code 工具及 Skills 系统使用的教程网站。
+这是一个全面的 AI 编程工具介绍和资源导航网站，帮助开发者快速了解和使用 Claude Code 和 Open Code两大 AI 编程助手。网站包含详细的工具介绍、API 文档、Skills 生态系统展示和实际应用案例，基于官方文档整理，确保内容准确和及时。
 
 ## 功能特性
 
-- 📚 **教程中心** - 从入门到进阶的完整教程体系
+- 🤖 **Claude Code 介绍** - Anthropic 官方 AI 编程代理完整指南
+- 🔓 **Open Code 介绍** - 开源 AI 编程代理工具详解
+- 🎯 **Skills 生态** - 30+ AI Agent Skills 生态系统展示
 - 📖 **API 文档** - 详细的命令参考和配置说明
-- 🎯 **Skills 目录** - 30+ AI Agent Skills 生态系统展示
 - 💡 **交互示例** - 实际案例和代码演示
 - 🎨 **明暗主题** - 支持明暗双模式切换
 - 📱 **响应式设计** - 适配各种设备屏幕
