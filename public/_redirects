@@ -1,1 +1,7 @@
-/*  /index.html  200
+# 静态页面路由支持
+/tutorials/[slug] /tutorials/[slug]/index.html 200
+/examples/[id] /examples/[id]/index.html 200
+/api/[section] /api/[section]/index.html 200
+
+# 其他路由回退到首页（用于 SPA 路由）
+/* /index.html 200

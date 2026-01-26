@@ -24,6 +24,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body
@@ -41,7 +43,7 @@ export default function RootLayout({
           </main>
           <footer className="border-t py-8 mt-12">
             <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-              <p>© 2026 Claude Code & Open Code 教程. 保留所有权利.</p>
+              <p>© {currentYear} Claude Code & Open Code 教程. 保留所有权利.</p>
             </div>
           </footer>
         </ThemeProvider>

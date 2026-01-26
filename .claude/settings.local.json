@@ -6,7 +6,10 @@
       "Bash(git push:*)",
       "mcp__web-reader__webReader",
       "Bash(npm run build:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "mcp__web-search-prime__webSearchPrime",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run lint:*)"
     ]
   }
 }
