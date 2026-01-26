@@ -12,7 +12,6 @@ const navigation = [
   { name: "Claude Code", href: "/claude-code", icon: Zap },
   { name: "Open Code", href: "/open-code", icon: FileCode },
   { name: "Skills", href: "/skills", icon: Box },
-  { name: "教程", href: "/tutorials", icon: Book },
   { name: "API 文档", href: "/api", icon: Search },
 ]
 

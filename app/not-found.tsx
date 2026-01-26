@@ -15,7 +15,10 @@ export default function NotFound() {
             <Link href="/">返回首页</Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/tutorials">浏览教程</Link>
+            <Link href="/claude-code">Claude Code</Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="/open-code">Open Code</Link>
           </Button>
         </div>
       </div>

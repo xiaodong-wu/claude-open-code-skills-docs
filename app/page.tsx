@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Zap, FileCode, ArrowRight, Book, Code2, Search, Play, Terminal, Shield } from "lucide-react"
+import { Zap, FileCode, ArrowRight, Code2, Search, Play, Terminal, Shield, Box } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -24,11 +24,6 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/tutorials">
-                开始学习 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
               <Link href="/claude-code">
                 Claude Code 教程 <Zap className="ml-2 h-5 w-5" />
               </Link>
@@ -36,6 +31,11 @@ export default function Home() {
             <Button size="lg" variant="outline" asChild>
               <Link href="/open-code">
                 Open Code 教程 <FileCode className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/skills">
+                Skills 生态 <Box className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -188,60 +188,60 @@ export default function Home() {
           <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-blue-500/10 rounded-lg">
-                <Book className="h-6 w-6 text-blue-500" />
+                <Zap className="h-6 w-6 text-blue-500" />
               </div>
-              <h3 className="text-xl font-bold">入门教程</h3>
+              <h3 className="text-xl font-bold">Claude Code</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              快速开始，掌握基础操作和核心概念
+              Anthropic 官方 AI 编程代理
             </p>
             <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-              <li>• 安装和配置指南</li>
-              <li>• 基础命令和工作流</li>
-              <li>• Plan & Build 模式使用</li>
+              <li>• 30 秒快速安装</li>
+              <li>• 智能代码理解</li>
+              <li>• MCP 集成支持</li>
             </ul>
             <Button asChild variant="outline" className="w-full">
-              <Link href="/tutorials">查看教程</Link>
+              <Link href="/claude-code">了解详情</Link>
             </Button>
           </div>
 
           <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-green-500/10 rounded-lg">
-                <Search className="h-6 w-6 text-green-500" />
+                <FileCode className="h-6 w-6 text-green-500" />
               </div>
-              <h3 className="text-xl font-bold">API 文档</h3>
+              <h3 className="text-xl font-bold">Open Code</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              完整的命令参考和配置选项说明
+              开源 AI 编程代理工具
             </p>
             <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-              <li>• Claude Code CLI 命令</li>
-              <li>• Open Code 命令参考</li>
-              <li>• 配置选项详解</li>
+              <li>• Plan & Build 模式</li>
+              <li>• 多 LLM Provider</li>
+              <li>• 完全开源免费</li>
             </ul>
             <Button asChild variant="outline" className="w-full">
-              <Link href="/api">查看文档</Link>
+              <Link href="/open-code">了解详情</Link>
             </Button>
           </div>
 
           <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/10 rounded-lg">
-                <Play className="h-6 w-6 text-purple-500" />
+                <Box className="h-6 w-6 text-purple-500" />
               </div>
-              <h3 className="text-xl font-bold">交互示例</h3>
+              <h3 className="text-xl font-bold">Skills 生态</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              实际案例和可运行的代码演示
+              AI Agent 能力扩展系统
             </p>
             <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-              <li>• 项目重构实战</li>
-              <li>• Bug 修复工作流</li>
-              <li>• 功能开发案例</li>
+              <li>• 30+ 可用 Skills</li>
+              <li>• 一键安装使用</li>
+              <li>• 开放生态系统</li>
             </ul>
             <Button asChild variant="outline" className="w-full">
-              <Link href="/examples">查看示例</Link>
+              <Link href="/skills">浏览 Skills</Link>
             </Button>
           </div>
         </div>
@@ -251,19 +251,24 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">准备好开始了吗？</h2>
           <p className="text-xl text-muted-foreground mb-4">
-            无论你是初学者还是经验丰富的开发者，这些教程都会帮助你更好地使用 AI 编程助手
+            无论你是初学者还是经验丰富的开发者，都可以通过这些工具提升开发效率
           </p>
           <p className="text-lg text-muted-foreground mb-8">
             基于 Claude Code 和 Open Code 官方文档整理，确保内容准确和及时
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/tutorials">
-                开始学习之旅 <ArrowRight className="ml-2 h-5 w-5" />
+              <Link href="/claude-code">
+                开始使用 Claude Code <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="https://github.com/xiaodong-wu/claude-open-code-docs" target="_blank" rel="noopener noreferrer">
+              <Link href="/open-code">
+                开始使用 Open Code <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="https://github.com/xiaodong-wu/claude-open-code-skills-docs" target="_blank" rel="noopener noreferrer">
                 GitHub 仓库 <FileCode className="ml-2 h-5 w-5" />
               </Link>
             </Button>
